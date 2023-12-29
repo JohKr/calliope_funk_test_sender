@@ -4,7 +4,6 @@ let richtung = 0
 let x_achse = 0
 let led_y_wert = 0
 let led_x_wert = 0
-let geschwindigkeit2 = 0
 radio.setGroup(1)
 radio.setTransmitPower(7)
 basic.forever(function () {
