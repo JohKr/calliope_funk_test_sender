@@ -1,5 +1,5 @@
 {
-    "name": "Calliope_Funk_Test",
+    "name": "Calliope_Funk_Test_Sender",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -10,7 +10,8 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
