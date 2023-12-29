@@ -1,4 +1,11 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
+    geschwindgkeit_0 = 0
+    geschwindigkeit = 0
+    led_x_wert = 0
+    led_y_wert = 0
+    richtung = 0
+    x_achse = 0
+    y_achse = 0
     schalter = 1
     basic.showLeds(`
         . . . . .
@@ -10,16 +17,13 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     schalter = 0
-    radio.sendValue("geschwindigkeit", geschwindgkeit_0)
-    radio.sendValue("richtung", geschwindgkeit_0)
-    basic.showIcon(IconNames.No)
 })
-let geschwindigkeit = 0
 let y_achse = 0
-let richtung = 0
 let x_achse = 0
+let richtung = 0
 let led_y_wert = 0
 let led_x_wert = 0
+let geschwindigkeit = 0
 let geschwindgkeit_0 = 0
 let schalter = 0
 schalter = 0
@@ -63,5 +67,9 @@ basic.forever(function () {
         led.plot(led_x_wert, led_y_wert)
         radio.sendValue("geschwindigkeit", geschwindigkeit)
         radio.sendValue("richtung", richtung)
+    } else {
+        radio.sendValue("geschwindigkeit", geschwindgkeit_0)
+        radio.sendValue("richtung", geschwindgkeit_0)
+        basic.showIcon(IconNames.No)
     }
 })
